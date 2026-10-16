@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Your Gift</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300;400;500&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0}
+[hidden]{display:none!important}
+/* Layout: one narrow card per gift, shown alone by #anchor; a colour band per gift */
+:root {
+  --paper: #fbfaf7;
+  --ink: #1d1b19;
+  --muted: #5d5853;
+  --line: #e2ddd5;
+  --ferrandi: #a3324f;
+  --toscana: #5c6b2e;
+  --angele: #2443b8;
+  --masters: #0f5a3c;
+  --gold: #9a7a2f;
+  --accent: var(--gold);
+  --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body: "Jost", "Futura", "Avenir Next", "Helvetica Neue", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #161514; --ink: #f1ede6; --muted: #b3aca2; --line: #34312d;
+    --ferrandi: #e07d97; --toscana: #aebd74; --angele: #8ea2ff; --masters: #6cc59d; --gold: #d6b56a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #161514; --ink: #f1ede6; --muted: #b3aca2; --line: #34312d;
+  --ferrandi: #e07d97; --toscana: #aebd74; --angele: #8ea2ff; --masters: #6cc59d; --gold: #d6b56a;
+  color-scheme: dark;
+}
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; font-weight: 300; }
+main {
+  max-width: 620px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 48px 72px;
+}
+.gift { display: flex; flex-direction: column; gap: 28px; }
+.eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+h1 { font-family: var(--display); font-weight: 500; font-size: clamp(38px, 9vw, 60px); line-height: 1.02; margin: 0; text-wrap: balance; }
+h1 em { font-style: italic; color: var(--accent); }
+.lede { font-size: 19px; color: var(--ink); margin: 0; text-wrap: pretty; }
+h2 { font-family: var(--display); font-weight: 500; font-style: italic; font-size: 24px; margin: 0 0 8px; }
+.facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 10px 20px; margin: 0; padding: 20px 0; border-block: 1px solid var(--line); }
+.facts dt { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); padding-top: 3px; font-weight: 400; }
+.facts dd { margin: 0; min-width: 0; }
+ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+p { margin: 0; text-wrap: pretty; }
+.note { color: var(--muted); font-size: 15px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sign { font-family: var(--display); font-style: italic; font-size: 22px; color: var(--accent); }
+.band { height: 6px; background: var(--accent); width: 72px; }
+#ferrandi { --accent: var(--ferrandi); }
+#toscana { --accent: var(--toscana); }
+#angele { --accent: var(--angele); }
+#masters { --accent: var(--masters); }
+@media (max-width: 420px) { .facts { grid-template-columns: minmax(0, 1fr); gap: 2px; } .facts dd { margin-bottom: 10px; } }
+</style>
+</head>
+<body>
+
+<main>
+  <section class="gift" id="welcome">
+    <div class="band"></div>
+    <div class="eyebrow">A gift for you</div>
+    <h1>Pick a <em>voucher</em></h1>
+    <p class="lede">Scan the QR code on the voucher you drew to see what's waiting for you.</p>
+  </section>
+
+  <section class="gift" id="ferrandi" hidden>
+    <div class="band"></div>
+    <div class="eyebrow">Paris · Ferrandi × Galeries Lafayette</div>
+    <h1>A pastry class <em>in Paris</em></h1>
+    <p class="lede">Put on an apron and bake a classic French dessert with a pastry chef from FERRANDI Paris, France's most famous culinary school. Then taste what you made.</p>
+    <dl class="facts">
+      <dt>Where</dt><dd>Ferrandi kitchen, 3rd floor, Lafayette Maison &amp; Gourmet, 35 Boulevard Haussmann, Paris 9e</dd>
+      <dt>How long</dt><dd>2 to 3 hours, tasting included</dd>
+      <dt>Group</dt><dd>At most 6 people, taught in French or English</dd>
+      <dt>When</dt><dd>Classes run Wednesday, Friday and Saturday at 3 PM. You pick the date.</dd>
+    </dl>
+    <div>
+      <h2>What you might bake</h2>
+      <p>The recipe changes with the season. Recent classes made a Paris-Brest, a vanilla flan with hazelnut praline, and two Yule logs at Christmas. Other seasons bring tarte Tatin, chocolate tart and mille-feuille.</p>
+    </div>
+    <p class="note">Arrive 5 to 10 minutes early and bring ID. Entry closes 15 minutes after the start. <a href="https://haussmann.galerieslafayette.com/en/events/bakers-secrets/" target="_blank" rel="noopener">See the class page</a></p>
+  </section>
+
+  <section class="gift" id="toscana" hidden>
+    <div class="band"></div>
+    <div class="eyebrow">Italy · Spring 2027</div>
+    <h1>A long weekend <em>in Tuscany</em></h1>
+    <p class="lede">A few days in Florence for art, food and evening walks along the Arno, then the countryside: cypress-lined hills, vineyards, long lunches and Chianti.</p>
+    <dl class="facts">
+      <dt>Where</dt><dd>Florence, then a country estate in Chianti or the Val d'Orcia</dd>
+      <dt>When</dt><dd>A long weekend in April or early May, when the hills are green and the wisteria is in bloom</dd>
+      <dt>How long</dt><dd>3 to 4 nights</dd>
+      <dt>Getting there</dt><dd>Fly to Florence, Pisa or Bologna</dd>
+    </dl>
+    <div>
+      <h2>Ideas for the weekend</h2>
+      <ul>
+        <li>The Uffizi and the view from Piazzale Michelangelo at sunset</li>
+        <li>Lunch at the Mercato Centrale</li>
+        <li>A wine tasting in the Chianti hills</li>
+        <li>Siena, Montepulciano or Pienza for a day</li>
+      </ul>
+    </div>
+    <p class="note">We'll choose the dates and places together.</p>
+  </section>
+
+  <section class="gift" id="angele" hidden>
+    <div class="band"></div>
+    <div class="eyebrow">Live · Instinct Tour 2027</div>
+    <h1>Angèle, <em>live</em></h1>
+    <p class="lede">Tickets to see Angèle on her new Instinct Tour, with the songs from her new album and the ones you already know by heart.</p>
+    <dl class="facts">
+      <dt>Paris</dt><dd>Accor Arena, March 2027</dd>
+      <dt>Brussels</dt><dd>ING Arena, 20 &amp; 21 March 2027</dd>
+      <dt>Amsterdam</dt><dd>AFAS Live, 11 May 2027</dd>
+      <dt>Also</dt><dd>London, Barcelona, Berlin in spring; Lille, Lyon, Bordeaux and more in autumn</dd>
+    </dl>
+    <p class="note">We'll pick the city and the night together. Some dates are already selling out, so we won't wait long.</p>
+  </section>
+
+  <section class="gift" id="masters" hidden>
+    <div class="band"></div>
+    <div class="eyebrow">Show jumping · 11 to 14 March 2027</div>
+    <h1>The Dutch <em>Masters</em></h1>
+    <p class="lede">A weekend at The Dutch Masters, where the world's best riders and horses compete in show jumping and dressage, followed by a weekend away.</p>
+    <dl class="facts">
+      <dt>Where</dt><dd>Brabanthallen, 's-Hertogenbosch, the Netherlands</dd>
+      <dt>When</dt><dd>11 to 14 March 2027. The Rolex Grand Prix is usually on the Sunday.</dd>
+      <dt>Stay</dt><dd>A weekend in the old town of Den Bosch</dd>
+    </dl>
+    <div>
+      <h2>Around the event</h2>
+      <ul>
+        <li>The Rolex Grand Prix, the event's main show-jumping class</li>
+        <li>A walk through the old town and St. John's Cathedral</li>
+        <li>A Bossche bol, the town's famous chocolate pastry</li>
+      </ul>
+    </div>
+    <p class="note"><a href="https://www.thedutchmasters.com/en/" target="_blank" rel="noopener">The Dutch Masters website</a></p>
+  </section>
+
+  <p class="sign" style="margin-top: 48px">With love</p>
+</main>
+
+<script>
+(function () {
+  var ids = ["ferrandi", "toscana", "angele", "masters"];
+  function show() {
+    var h = (location.hash || "").replace("#", "");
+    var match = ids.indexOf(h) !== -1;
+    document.getElementById("welcome").hidden = match;
+    ids.forEach(function (id) { document.getElementById(id).hidden = id !== h; });
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", show);
+  show();
+})();
+</script>
+</body>
+</html>
